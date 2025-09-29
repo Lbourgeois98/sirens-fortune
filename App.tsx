@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Navigation } from './components/Navigation';
+import { Navigation } from './src/components/Navigation';
 import { HomePage } from './pages/HomePage';
 import { ShopPage } from './pages/ShopPage';
 import { BonusesPage } from './pages/BonusesPage';
