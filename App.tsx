@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navigation } from './src/components/Navigation';
-import { HomePage } from './pages/HomePage';
-import { ShopPage } from './pages/ShopPage';
-import { BonusesPage } from './pages/BonusesPage';
-import { RulesPage } from './pages/RulesPage';
-import { ContactPage } from './pages/ContactPage';
+import { HomePage } from './src/pages/HomePage';
+import { ShopPage } from './src/pages/ShopPage';
+import { BonusesPage } from './src/pages/BonusesPage';
+import { RulesPage } from './src/pages/RulesPage';
+import { ContactPage } from './src/pages/ContactPage';
 
 function App() {
   return (
