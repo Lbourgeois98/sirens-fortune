@@ -1,11 +1,8 @@
 import React from 'react';
-import { Facebook, MessageCircle, Bitcoin, DollarSign } from 'lucide-react';
+import { Facebook, MessageCircle, Gamepad2, ShoppingCart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-interface HomePageProps {
-  onShowPayment: (type: 'deposit' | 'withdrawal') => void;
-}
-
-export const HomePage: React.FC<HomePageProps> = ({ onShowPayment }) => {
+export const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center pt-20">
       {/* Animated Background Elements */}
@@ -53,11 +50,19 @@ export const HomePage: React.FC<HomePageProps> = ({ onShowPayment }) => {
           
           {/* Description */}
           <p className="text-lg sm:text-xl md:text-2xl text-teal-300 mb-16 max-w-4xl mx-auto leading-relaxed font-medium">
-            Join our exclusive underwater casino realm by connecting with us on Facebook to set up your account and begin your legendary journey
+            Explore our collection of immersive aquatic-themed video games and dive into underwater adventures like never before
           </p>
           
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center mb-12">
+            <Link
+              to="/shop"
+              className="group bg-gradient-to-r from-cyan-600 via-teal-600 to-cyan-600 hover:from-cyan-500 hover:via-teal-500 hover:to-cyan-500 text-white px-8 sm:px-12 py-4 sm:py-6 rounded-full font-bold text-lg sm:text-xl transition-all duration-500 transform hover:scale-110 hover:shadow-2xl hover:shadow-cyan-400/30 flex items-center gap-4 w-full sm:w-auto justify-center border-2 border-cyan-400/30 hover:border-cyan-300/60"
+            >
+              <Gamepad2 className="w-6 h-6 sm:w-8 sm:h-8 group-hover:animate-bounce" />
+              <span className="drop-shadow-lg">Browse Games</span>
+            </Link>
+            
             <a
               href="https://www.facebook.com/sirens2fortune/"
               target="_blank"
@@ -79,29 +84,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onShowPayment }) => {
             </a>
           </div>
           
-          {/* Quick Payment Actions */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
-            <button
-              onClick={() => onShowPayment('deposit')}
-              className="group bg-gradient-to-r from-orange-600 via-yellow-600 to-orange-600 hover:from-orange-500 hover:via-yellow-500 hover:to-orange-500 text-white px-6 sm:px-10 py-3 sm:py-5 rounded-full font-bold text-base sm:text-lg transition-all duration-500 transform hover:scale-105 hover:shadow-xl hover:shadow-orange-400/30 flex items-center gap-3 w-full sm:w-auto justify-center border-2 border-orange-400/30 hover:border-orange-300/60"
-            >
-              <Bitcoin className="w-5 h-5 sm:w-6 sm:h-6 group-hover:animate-bounce" />
-              <span className="drop-shadow-lg">Crypto Deposit</span>
-            </button>
-            
-            <button
-              onClick={() => onShowPayment('withdrawal')}
-              className="group bg-gradient-to-r from-green-600 via-emerald-600 to-green-600 hover:from-green-500 hover:via-emerald-500 hover:to-green-500 text-white px-6 sm:px-10 py-3 sm:py-5 rounded-full font-bold text-base sm:text-lg transition-all duration-500 transform hover:scale-105 hover:shadow-xl hover:shadow-green-400/30 flex items-center gap-3 w-full sm:w-auto justify-center border-2 border-green-400/30 hover:border-green-300/60"
-            >
-              <DollarSign className="w-5 h-5 sm:w-6 sm:h-6 group-hover:animate-bounce" />
-              <span className="drop-shadow-lg">Withdraw</span>
-            </button>
-          </div>
-          
           {/* Powered by Stripe Notice */}
           <div className="bg-gradient-to-r from-slate-800/80 to-blue-900/80 backdrop-blur-sm rounded-2xl p-4 border border-blue-400/30 inline-block">
             <p className="text-blue-200 text-sm font-medium">
-              🔒 Secure crypto payments powered by <span className="text-blue-400 font-bold">Stripe</span>
+              🎮 Premium aquatic gaming experiences powered by <span className="text-blue-400 font-bold">Sirens Studio</span>
             </p>
           </div>
         </div>

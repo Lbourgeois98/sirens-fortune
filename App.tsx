@@ -2,24 +2,21 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { HomePage } from './pages/HomePage';
+import { ShopPage } from './pages/ShopPage';
 import { BonusesPage } from './pages/BonusesPage';
-import { PaymentsPage } from './pages/PaymentsPage';
 import { RulesPage } from './pages/RulesPage';
 import { ContactPage } from './pages/ContactPage';
-import { StripePayment } from './components/StripePayment';
 
 function App() {
-  const [showPayment, setShowPayment] = useState<'deposit' | 'withdrawal' | null>(null);
-
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-b from-slate-900 via-teal-900 to-cyan-900 text-white overflow-x-hidden">
         <Navigation />
         <main className="relative">
           <Routes>
-            <Route path="/" element={<HomePage onShowPayment={setShowPayment} />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/shop" element={<ShopPage />} />
             <Route path="/bonuses" element={<BonusesPage />} />
-            <Route path="/payments" element={<PaymentsPage onShowPayment={setShowPayment} />} />
             <Route path="/rules" element={<RulesPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
@@ -32,12 +29,6 @@ function App() {
             </p>
           </div>
         </footer>
-        {showPayment && (
-          <StripePayment
-            type={showPayment}
-            onClose={() => setShowPayment(null)}
-          />
-        )}
       </div>
     </Router>
   );

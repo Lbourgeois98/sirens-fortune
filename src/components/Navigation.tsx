@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Home, Crown, Shield, DollarSign, MessageCircle } from 'lucide-react';
+import { Menu, X, Home, Crown, Shield, Gamepad2, MessageCircle } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 export const Navigation: React.FC = () => {
@@ -8,8 +8,8 @@ export const Navigation: React.FC = () => {
 
   const navItems = [
     { path: '/', label: 'Home', icon: <Home className="w-4 h-4" /> },
+    { path: '/shop', label: 'Shop', icon: <Gamepad2 className="w-4 h-4" /> },
     { path: '/bonuses', label: 'Bonuses', icon: <Crown className="w-4 h-4" /> },
-    { path: '/payments', label: 'Payments', icon: <DollarSign className="w-4 h-4" /> },
     { path: '/rules', label: 'Rules', icon: <Shield className="w-4 h-4" /> },
     { path: '/contact', label: 'Contact', icon: <MessageCircle className="w-4 h-4" /> }
   ];
