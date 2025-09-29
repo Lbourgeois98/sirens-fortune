@@ -40,10 +40,10 @@ export const BonusesPage: React.FC = () => {
               <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full animate-ping opacity-60"></div>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-              Game Bundles & Deals
+              Treasure Bonuses
             </h1>
             <p className="text-lg sm:text-xl text-cyan-200 mb-8">
-              Special offers and bundle deals on our aquatic game collection
+              Unlock legendary rewards in the depths of Sirens Fortune
             </p>
           </div>
 

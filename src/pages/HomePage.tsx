@@ -50,7 +50,7 @@ export const HomePage: React.FC = () => {
           
           {/* Description */}
           <p className="text-lg sm:text-xl md:text-2xl text-teal-300 mb-16 max-w-4xl mx-auto leading-relaxed font-medium">
-            Explore our collection of immersive aquatic-themed video games and dive into underwater adventures like never before
+            Join our exclusive casino realm through Facebook and discover legendary bonuses, plus explore our collection of aquatic-themed games
           </p>
           
           {/* Action Buttons */}
@@ -87,7 +87,7 @@ export const HomePage: React.FC = () => {
           {/* Powered by Stripe Notice */}
           <div className="bg-gradient-to-r from-slate-800/80 to-blue-900/80 backdrop-blur-sm rounded-2xl p-4 border border-blue-400/30 inline-block">
             <p className="text-blue-200 text-sm font-medium">
-              🎮 Premium aquatic gaming experiences powered by <span className="text-blue-400 font-bold">Sirens Studio</span>
+              🎰 Secure payments powered by <span className="text-blue-400 font-bold">Stripe</span> • 🎮 Plus aquatic games collection
             </p>
           </div>
         </div>
